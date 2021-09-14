@@ -10,13 +10,13 @@ FAIL: test_pair (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 18, in test_pair
     self.assertListEqual(
-AssertionError: Lists differ: ['hey jad!', None, None] != [True, False, False]
+AssertionError: Lists differ: [True, None, None] != [True, False, False]
 
-First differing element 0:
-'hey jad!'
-True
+First differing element 1:
+None
+False
 
-- ['hey jad!', None, None]
+- [True, None, None]
 + [True, False, False] : Mauvaise identification de la parité de la longueur de la chaine
 
 ======================================================================
