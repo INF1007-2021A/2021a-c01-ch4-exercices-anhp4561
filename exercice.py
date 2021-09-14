@@ -18,11 +18,20 @@ def remove_third_char(string: str) -> str:
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    vieux = string.index (old_char)
-    avant_old = string [0:vieux]
-    apres_old = string [vieux+1:]
-    nouveau = avant_old+new_char+apres_old
-    return nouveau
+    #vieux = string.index (old_char)
+    #avant_old = string [0:vieux]
+    #apres_old = string [vieux+1:]
+    #nouveau = avant_old+new_char+apres_old
+    mot = ""
+    lettre= ""
+    for i in string:
+        if (i!= old_char):
+            lettre = i
+        else:
+            lettre = new_char
+        mot += lettre
+
+    return mot
     pass
 
 
@@ -56,7 +65,7 @@ def main() -> None:
     print(f"On supprime le 3e caratère dans la chaine: {chaine}. Résultat : {remove_third_char(chaine)}")
 
     chaine = "hello world!"
-    print(f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
+    print(f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'l', 'z')}")
 
     print(f"Le nombre d'occurrence de l dans hello world! est : {get_number_of_char(chaine, 'l')}")
     
